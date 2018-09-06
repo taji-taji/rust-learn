@@ -40,3 +40,7 @@ Rust book (2018 Edition) の学習用リポジトリ
   - Character Types
     - シングルクオートで囲まれる
     - Unicode Scalar Valueなので、ASCII以外にも日本語などを表すこともできる
+- Compound Types
+  - The Tuple Type
+    - 最初に宣言した長さから変更できない
+    - タプルの各要素へは `x.0` のように `{変数}.{index}` でアクセスできる
