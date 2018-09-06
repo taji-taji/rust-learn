@@ -22,4 +22,21 @@ fn main() {
 
     let remainder = 43 % 5;
     println!("remainder: {}", remainder);
+
+    // Boolean Types
+    let t = true;
+    println!("t: {}", t);
+
+    let f: bool = false;
+    println!("f: {}", f);
+
+    // Character Types
+    let c = 'z';
+    println!("c: {}", c);
+    
+    let z = 'ℤ';
+    println!("z: {}", z);
+
+    let heart_eyed_cat = '😻';
+    println!("heart_eyed_cat: {}", heart_eyed_cat);
 }

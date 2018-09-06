@@ -37,3 +37,6 @@ Rust book (2018 Edition) の学習用リポジトリ
     - デフォルトは `i32` 基本的にはこれを使うのが速い
   - Floating Point Type
     - `f64` (64bit)と `f32` (32bit)がある
+  - Character Types
+    - シングルクオートで囲まれる
+    - Unicode Scalar Valueなので、ASCII以外にも日本語などを表すこともできる
