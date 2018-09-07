@@ -44,3 +44,8 @@ Rust book (2018 Edition) の学習用リポジトリ
   - The Tuple Type
     - 最初に宣言した長さから変更できない
     - タプルの各要素へは `x.0` のように `{変数}.{index}` でアクセスできる
+  - The Array Type
+    - 他の多くの言語と違って、固定長
+    - 可変長な型でvectorというのがあるらしい
+    - 型を指定する場合は `[型名; 長さ]` を記述
+    - Arrayの長さより大きいindexで要素にアクセスするとruntime errorになる

@@ -57,8 +57,21 @@ fn main() {
     let x: (i32, f64, u8) = (500, 6.4, 1);
 
     let five_hundred = x.0;
+    println!("x.0: {}", five_hundred);
 
     let six_point_four = x.1;
+    println!("x.1: {}", six_point_four);
 
     let one = x.2;
+    println!("x.2: {}", one);
+
+    // Array Type
+    let a = [1, 2, 3, 4, 5];
+    println!("a: {}", a[0]);
+
+    let _months = ["January", "February", "March", "April", "May", "June", "July",
+                  "August", "September", "October", "November", "December"];
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("a[4]: {}", a[4]);
 }
