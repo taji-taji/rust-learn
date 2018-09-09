@@ -62,3 +62,17 @@ Rust book (2018 Edition) の学習用リポジトリ
     - `let x = 5;` と `let x = { 5 };` は同じになる
 - Functions with Return Values
   - 値を返す関数の処理ブロック内の最終行はExpressionなのでセミコロンは不要
+
+```rust
+// 下記の例のそれぞれの x + 1 は
+// Expression なのでセミコロン不要
+
+let y = {
+    let x = 5;
+    x + 1
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+```
