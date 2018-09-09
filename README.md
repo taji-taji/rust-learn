@@ -49,3 +49,16 @@ Rust book (2018 Edition) の学習用リポジトリ
     - 可変長な型でvectorというのがあるらしい
     - 型を指定する場合は `[型名; 長さ]` を記述
     - Arrayの長さより大きいindexで要素にアクセスするとruntime errorになる
+
+### 3.3 - Functions
+
+- Statements and Expressions
+  - Statementは値を返さない
+    - 故に `let x = (let y = 6);` のようにStatementを変数に入れることはできない
+    - 他言語にあるような `x = y = 6` のような書き方もできない
+  - `{}` で新しいスコープのブロックを作ることができる
+    - `{}` ブロックの中は最終的に値を返すので、Expressionであり、Expressionに最後のセミコロンはいらない
+    - 故にブロックの最後の行の処理はセミコロンが不要になる
+    - `let x = 5;` と `let x = { 5 };` は同じになる
+- Functions with Return Values
+  - 値を返す関数の処理ブロック内の最終行はExpressionなのでセミコロンは不要
