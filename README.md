@@ -76,3 +76,25 @@ fn plus_one(x: i32) -> i32 {
     x + 1
 }
 ```
+
+### 3.5 - Control Flow
+
+- `if` Expressions
+  - if文の条件式は `bool` でなければならない
+    - 暗黙的に `bool` 以外の型を `bool` に変換しないので、明示的に `bool` で条件を書く必要がある
+  - `if` は Expression なので、`let` statement の右辺として使用できる
+    - `if` Expression が返す値の型は統一されていないといけない
+      - `if` で返す値と `else` で返す値が違うとエラー
+
+```rust
+// numberがi32の場合、次のようなエラーになる
+
+error[E0308]: mismatched types
+  --> src/main.rs:10:8
+   |
+10 |     if number {
+   |        ^^^^^^ expected bool, found integral variable
+   |
+   = note: expected type `bool`
+              found type `{integer}`
+```
