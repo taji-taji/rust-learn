@@ -85,6 +85,8 @@ fn plus_one(x: i32) -> i32 {
   - `if` は Expression なので、`let` statement の右辺として使用できる
     - `if` Expression が返す値の型は統一されていないといけない
       - `if` で返す値と `else` で返す値が違うとエラー
+- Repetition with `loop`
+  - `loop` は Expression なので、 `let` statement の右辺として使用できる
 
 ```rust
 // numberがi32の場合、次のようなエラーになる
@@ -98,3 +100,4 @@ error[E0308]: mismatched types
    = note: expected type `bool`
               found type `{integer}`
 ```
+
