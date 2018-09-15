@@ -2,7 +2,6 @@ use std::io;
 
 fn main() {
 
-
     loop {
         println!("Input nth number:");
 
@@ -16,33 +15,23 @@ fn main() {
             Err(_) => continue,
         };
 
-        get_fibonacchi_of(input_value);
-        // println!("{}番目のフィボナッチ数は: {}", input_value, );
+        println!("{}番目のフィボナッチ数は: {}", input_value, get_fibonacchi_of(input_value));
+        break;
     }
 }
 
 fn get_fibonacchi_of(n: u32) -> u32 {
-    // n == 4
     let mut previous: u32 = 0;
-    let mut current: u32 = 0;
     let mut sum: u32 = 0;
     for i in 0..n {
         if i == 0 {
             sum += 1;
             continue;
         } else {
-            current = sum;
+            let tmp: u32 = sum;
             sum += previous;
-            previous = current;
+            previous = tmp;
         }
     }
     sum
 }
-
-// 0:0
-// 1:1
-// 2:1
-// 3:2
-// 4:3
-// 5:5
-// 6:8
