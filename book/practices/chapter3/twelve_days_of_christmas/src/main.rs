@@ -1,9 +1,24 @@
 fn main() {
-    println!("{}", get_nth_phrase(1));
+    for i in 1..13 {
+        let mut lyrics = String::new();
+        lyrics.push_str(&lyrics_base(i));
+        lyrics.push_str("\n");
+        for j in (1..i + 1).rev() {
+            lyrics.push_str(&get_nth_present(j));
+            if i == 1 {
+                lyrics.push_str(".");
+            } else {
+                lyrics.push_str(",");
+            }
+            lyrics.push_str("\n");
+        }
+        lyrics.push_str("\n");
+        println!("{}", lyrics);
+    }
 }
 
-fn lyrics_base() {
-
+fn lyrics_base(n: u32) -> String {
+    ["On the".to_string(), get_nth_phrase(n), "day of Christmas,".to_string(), "my true love sent to me.".to_string()].join(" ")
 }
 
 fn get_nth_phrase(n: u32) -> String {
