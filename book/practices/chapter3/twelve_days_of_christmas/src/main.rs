@@ -5,7 +5,7 @@ fn main() {
         lyrics.push_str("\n");
         for j in (1..i + 1).rev() {
             lyrics.push_str(&get_nth_present(j));
-            if i == 1 {
+            if j == 1 {
                 lyrics.push_str(".");
             } else {
                 lyrics.push_str(",");
