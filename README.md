@@ -101,3 +101,11 @@ error[E0308]: mismatched types
               found type `{integer}`
 ```
 
+## Chapter 4
+
+### 4.1 What is Ownership?
+
+- Ownership Rules
+  - 3つのルール
+    - 1. Rustの各値値には `owner` という変数をもつ
+    - 2. 一度に所有できる `owner` は1つだけ
