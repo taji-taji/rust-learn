@@ -103,9 +103,10 @@ error[E0308]: mismatched types
 
 ## Chapter 4
 
-### 4.1 What is Ownership?
+### 4.1 - What is Ownership?
 
 - Ownership Rules
   - 3つのルール
     - 1. Rustの各値値には `owner` という変数をもつ
     - 2. 一度に所有できる `owner` は1つだけ
+    - 3. `owner` がスコープから外れると、その値は削除される
