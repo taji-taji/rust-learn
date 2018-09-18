@@ -4,4 +4,8 @@ fn main() {
 
         // do stuff with s
     }                      // this scope is now over, and s is no longer valid
+
+    let mut s = String::from("hello");
+    s.push_str(", world!");
+    println!("{}", s);
 }

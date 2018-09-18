@@ -107,6 +107,13 @@ error[E0308]: mismatched types
 
 - Ownership Rules
   - 3つのルール
-    - 1. Rustの各値値には `owner` という変数をもつ
-    - 2. 一度に所有できる `owner` は1つだけ
-    - 3. `owner` がスコープから外れると、その値は削除される
+    1. Rustの各値値には `owner` という変数をもつ
+    2. 一度に所有できる `owner` は1つだけ
+    3. `owner` がスコープから外れると、その値は削除される
+- The `String` Type
+  - `String` は mutable にできるが、 `string literal` は immutable でしか扱えない
+  - メモリの使い方が違うことによる違い
+- Memory and Allocation
+  - `string literal` はハードコードされるので、コンパイル時に内容がわかる
+  - 故に `string literal` は高速であるが、immutableしか扱えない
+  - `String` 型はmutableで扱うことができ、動的に内容を変えることができるが、それ故にコンパイル時に必要なメモリサイズが分からない
