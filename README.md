@@ -117,3 +117,10 @@ error[E0308]: mismatched types
   - `string literal` はハードコードされるので、コンパイル時に内容がわかる
   - 故に `string literal` は高速であるが、immutableしか扱えない
   - `String` 型はmutableで扱うことができ、動的に内容を変えることができるが、それ故にコンパイル時に必要なメモリサイズが分からない
+  - 変数がScopeから外れると、Rustは `drop` という特別な関数を自動で呼ぶ
+  - integerの場合、値を代入した変数を別の変数に代入した時には値のコピーが代入される
+    - 値はそれぞれstackにpushされる
+  - `String` 型の場合だと、コピーが代入されるわけではない
+    - `String` は **ポインタの位置**, **length**, **capacity** のデータをstackに持つ
+    - `String` の値自体はheapに保存される
+    - 代入時にコピーされるのはstackに持っているデータなので、値自体は同じポインタ位置から参照することになる

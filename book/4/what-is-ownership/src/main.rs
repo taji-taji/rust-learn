@@ -8,4 +8,10 @@ fn main() {
     let mut s = String::from("hello");
     s.push_str(", world!");
     println!("{}", s);
+
+    {
+        let s = String::from("hello"); // s is valid from this point forward
+
+        // do stuff with s
+    }                                  // this scope is now over, and s is no longer valid
 }
