@@ -130,3 +130,13 @@ error[E0308]: mismatched types
   - `String` 型でコピーを作成する場合は `clone` メソッドを使用する
     - stackのデータだけでなく、heapのデータもコピーされる
     - 場合によっては負荷が高い処理になることを頭に入れて使用すること
+  - Stack-Only Data
+    - `Integer` などはStackに値が溜まるので `clone` などは不要
+    - 代入後も代入元の変数は無効化されず、使用できる
+    - これらを `Copy` 特性と呼ぶ
+    - `Copy` 特性のある型
+      - integer
+      - floating point
+      - bool
+      - char
+      - 要素が `Copy` 特性のみで構成される tuple
