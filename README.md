@@ -140,3 +140,7 @@ error[E0308]: mismatched types
       - bool
       - char
       - 要素が `Copy` 特性のみで構成される tuple
+- Ownership and Functions
+  - 関数の引数に値を渡すときも代入するときと同じように元の変数は無効化される
+    - ※ `Copy` 特性を持つものは無効化されない
+  - 関数の引数に渡した値を再度使いたい場合は、tuple型で元の値と関数で処理した結果を一緒に返すという方法もある
